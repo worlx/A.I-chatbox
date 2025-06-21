@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gemini Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+ 
+  <div class="chat-container">
+    <!-- Load Lottie Web Player -->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<!-- Display the animation -->
+<lottie-player
+  src="{{ url_for('static', filename='chat_animation.json') }}"
+  background="transparent"
+  speed="1"
+  loop
+  autoplay
+  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
+</lottie-player>
+
+
+    <div id="chat-box">
+      <!-- Chat messages will appear here once expanded -->
+    </div>
+    <div class="input-area">
+
+  <div style ="display:flex;
+    margin-right: 40px;"
+  >
+    <input class= "input" type="text" id="user-input" placeholder="lets learn something new today" />
+  </div>
+  <div style =" display:inline-block;
+  margin-left: 5 px; ">
+    <button  onclick="sendMessage()" class="button">
+  <span>Send</span>
+</button>
+  </div>
+</div>
+
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
