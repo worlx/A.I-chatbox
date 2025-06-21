@@ -3,7 +3,7 @@ import fitz  # PyMuPDF
 import google.generativeai as genai
 
 # 🔑 Set your Gemini API key
-genai.configure(api_key="AIzaSyCsMgKMJyEh-DpkRuzigVrS9f7DePjliUo")  # Replace with your Gemini key
+genai.configure(api_key="ADD your A.P.I KEY")  # Replace with your Gemini key
 
 # 📂 Load all text from multiple PDFs using fitz (PyMuPDF)
 def load_all_pdfs():
